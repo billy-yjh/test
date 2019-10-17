@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  outline: none;
+  text-decoration: none;
+}
+
+.wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  min-width: 375px;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  padding: 5px 7px;
+  box-sizing: border-box;
+  background: rgba(79, 204, 156, 0.705);
+}
+
+.header .img-wrapper {
+  display: inline-block;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  margin: 20px;
+  box-sizing: border-box;
+}
+
+.header .img-wrapper img {
+  display: inline-block;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+}
+
+.header .userName {
+  margin-left: 15px;
+  font-size: 15px;
+  color: #eeeeee;
+}
+@media screen and (max-width: 800px){
+  .header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .header .img-wrapper{
+    display: block;
+    margin: 10px;
+  }
+  .header .userName{
+    display: block;
+    margin: 0px;
+  }
+}
+.container {
+  position: absolute;
+  top: 120px;
+  bottom: 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.container .container-left-menu {
+  flex: 0 0 155px;
+  height: 100%;
+  background: rgb(68, 176, 209);
+  box-sizing: border-box;
+}
+@media screen and (max-width: 800px){
+  .container .container-left-menu{
+    flex: 0 0 25%;
+    background: green ;
+  }
+}
+
+.container .container-left-menu li {
+  padding: 10px 6px;
+  color: black;
+  cursor: pointer;
+}
+
+.container .container-left-menu li.active {
+  color: red;
+}
+.container .container-right-show-msg{
+  flex: 1;
+  height: 100%;
+}
+.container .container-right-show-msg .userMsg{
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  display: none;
+}
+
